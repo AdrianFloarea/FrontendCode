@@ -45,6 +45,7 @@ function showList(){
     myTable += '</table>';
     myTable += '<div>Total salary:'+suma+'</div>';
     myTable += "<div><input type='number' id='sorter'/><button onclick='sortEmployees()'>Sort Employees</button></div>";
+    myTable += "<div><input type='text' id='keyWordFilter'/><button onclick='filterUsingArray()'>Filter using array</button><button onclick='filterByHiding()'>Filter by hiding</button></div>";
     var container=document.getElementById('listcontainer');
     container.innerHTML = myTable;
 }
@@ -196,5 +197,27 @@ function sortEmployees(){
       return 0;
     })
     showList();
+  }
+}
+
+function filterUsingArray(){
+  var keyword=document.getElementById('keyWordFilter').value;
+  var tmpArray=new Array();
+  for(var i in employeesList){
+    var item=employeesList[i];
+    if(item.firstName.localeCompare(keyword)==0 || item.lastName.localeCompare(keyword)==0 || item.phone.localeCompare(keyword)==0 || item.salary==keyword){
+      tmpArray.push(item);
+    }
+  }
+  employeesList=tmpArray;
+  showList();
+}
+
+function filterByHiding(){
+  var keyword=document.getElementById('keyWordFilter').value;
+  var itemArray=new Array();
+  var table=document.getElementsByClassName('table')[0].rows;
+  for(var i in table){
+    console.log(table);
   }
 }
