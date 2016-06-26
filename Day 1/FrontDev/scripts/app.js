@@ -215,9 +215,11 @@ function filterUsingArray(){
 
 function filterByHiding(){
   var keyword=document.getElementById('keyWordFilter').value;
-  var itemArray=new Array();
   var table=document.getElementsByClassName('table')[0].rows;
-  for(var i in table){
-    console.log(table);
+  for(var i=0; i<employeesList.length;i++){
+    var item=employeesList[i];
+    if(!(item.firstName.localeCompare(keyword)==0 || item.lastName.localeCompare(keyword)==0 || item.phone.localeCompare(keyword)==0 || item.salary==keyword)){
+      table[i+1].style.display='none';
+    }
   }
 }
