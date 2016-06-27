@@ -5,8 +5,15 @@ hrApp.service('MathService', function () {
             },
             substract: function (a,b) {
                 return a-b;
+            },
+            multiply: function (a,b) {
+                return a*b;
+            },
+            divide: function (a,b){
+                return a/b;
             }
             // TODO #14 add multiply and divide functions
+
         }
     }
 );

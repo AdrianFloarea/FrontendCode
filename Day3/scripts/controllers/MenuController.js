@@ -2,6 +2,9 @@ hrApp.controller('MenuController', ['$scope', 'employeeActionsService', function
     $scope.employeeActionList = [{
         url:'#/employeeslist',
         label:'Employee List'
+    },{
+        url:'#/employeeadd',
+        label:"Add Employee"
     }];
 
     // TODO #12 - load menu items from Value
