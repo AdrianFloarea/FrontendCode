@@ -12,6 +12,10 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl:'views/demo/math.html',
             controller:'MathController'
         })
+        .when('/demoRequest',{
+            templateUrl:'views/demo/request.html',
+            controller: 'RequestController'
+        })
         .otherwise({
             templateUrl:'views/main.html',
             controller:'MainController'
