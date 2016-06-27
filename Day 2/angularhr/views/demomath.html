@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+  </head>
+
+  <body>
+    <h1>Demo Math</h1>
+    <div ng-app="hrApp">
+      <div ng-controller="MathController">
+        <p>
+          First number:
+        </p><input type="number" ng-model="a"/>
+        <p>
+          Second number:
+        </p> <input type="number" ng-model="b"/>
+        <div>
+            <button ng-click="calculate()">Calculate</button>
+        </div>
+        <p> a + b = <span>{{r1}}</span></p>
+
+        <p> a - b = <span>{{r2}}</span></p>
+
+        <p> a * b = <span>{{r3}}</span></p>
+
+        <p> a / b = <span>{{r4}}</span></p>
+      </div>
+    </div>
+  </body>
+</html>
